@@ -17,3 +17,25 @@ To see a list of all properties and methods supported, visit https://developer.m
 This also means that there is no list of current objects stored in the collection. WeakSets are not enumerable.
 
 To see a list of all properties and methods supported, visit https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet
+
+## Implementation (ES6)
+
+```js
+// Create a Set
+let mySet = new Set();
+
+// Setting the Values
+mySet.add(1); // Set [ 1 ]
+mySet.add(5); // Set [ 1, 5 ]
+mySet.add(5); // Set [ 1, 5 ]
+mySet.add("some text"); // Set [ 1, 5, 'some text' ]
+
+// Size of Map
+mySet.size; // 5
+
+// Check if set has a key present
+mySet.has(1); // true
+
+// Remove a Key
+mySet.delete(5); // removes 5 from the set
+```
