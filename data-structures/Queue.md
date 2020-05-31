@@ -43,3 +43,98 @@ The complexity of enqueue and dequeue operations in a queue using an array is `O
 - `Circular Queue` : CPU scheduling, Memory management, Traffic Management
 - `Priority Queue` : Dijkstra's algorithm, for implementing stack, for load balancing and interrupt handling in an operating system, for data compression in Huffman code
 - `Deque` : In undo operations on softwares, To store history in browsers, For implementing both stacks and queues.
+
+## Implementation
+
+```js
+class Node {
+  constructor(value) {
+    this.val = value;
+    this.next = null;
+  }
+}
+
+class Queue {
+  constructor() {
+    this.first = null;
+    this.last = null;
+    this.size = 0;
+  }
+
+  enqueue(val) {
+    const newNode = new Node(val);
+
+    if (this.size === 0) {
+      this.first = newNode;
+      this.last = newNode;
+    } else {
+      this.last.next = newNode;
+      this.last = newNode;
+    }
+
+    return ++this.size;
+  }
+
+  dequeue() {
+    if (this.size === 0) return undefined;
+    const temp = this.first;
+
+    if (this.size === 1) {
+      this.first = null;
+      this.last = null;
+    } else {
+      this.first = this.first.next;
+    }
+
+    this.size--;
+    return temp.val;
+  }
+}
+
+const queue = new Queue();
+
+queue.enqueue(1);
+queue.dequeue();
+queue.enqueue(2);
+queue.enqueue(3);
+```
+
+## Implementation (Using in-built arrays)
+
+```js
+class Queue {
+  constructor() {
+    this._size = 0;
+    this._items = [];
+  }
+
+  enqueue(value) {
+    this._items.push(value);
+    this._size++;
+  }
+
+  dequeue() {
+    if (!this._size) return;
+    else {
+      this._size--;
+      return this._items.splice(0, 1);
+    }
+  }
+
+  isEmpty() {
+    return !this._size;
+  }
+
+  size() {
+    return this._size;
+  }
+
+  front() {
+    return this._items[0];
+  }
+
+  rear() {
+    return this._items[this._size - 1];
+  }
+}
+```
