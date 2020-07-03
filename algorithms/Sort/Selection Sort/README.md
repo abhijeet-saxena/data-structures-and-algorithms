@@ -12,8 +12,6 @@ Compare minimum with the third element. Again, if the third element is smaller, 
 
 The process goes on until the last element.
 
----
-
 ## Complexity
 
 The time complexity of the selection sort is the same in all cases. At every step, you have to find the minimum element and put it in the right place. The minimum element is not known until the end of the array is not reached.
@@ -23,8 +21,6 @@ The time complexity of the selection sort is the same in all cases. At every ste
 | O(n<sup>2</sup>) | O(n<sup>2</sup> | O(n<sup>2</sup>) |
 
 **Space complexity is O(1)** because an extra variable temp is used.
-
----
 
 ## Selection Sort Applications
 

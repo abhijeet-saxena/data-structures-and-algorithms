@@ -1,45 +1,44 @@
 # Graphs
 
-A graph is a data structure where a node can have zero or more adjacent elements.
+> A graph is a data structure where a node can have zero or more adjacent elements.
 
-The connection between two nodes is called **edge**. Nodes can also be called **vertices**.
+More precisely, a graph is a data structure (V, E) that consists of -
 
-The **degree** is the number of edges connected to a vertex.
+- A collection of vertices V
+- A collection of edges E, represented as ordered pairs of vertices (u,v)
 
-If the edges are bi-directional, then we have an **undirected graph**. But, if the edges have a direction, then we have a **directed graph** or di-graph for short.
+## Graph Terminology
 
-Vertex can have edges that go to itself (e.g., blue node), this is called **self-loop**.
+- `Edge` : The connection between two nodes
+- `Adjacency` : A vertex is said to be adjacent to another vertex if there is an edge connecting them
+- `Degree` : Number of edges connected to a vertex
+- `Path` : A sequence of edges that allows you to go from vertex A to vertex B is called a path
+- `Directed Graph` : A graph in which the edges do not point in a particular direction
+- `Undirected Graph` : A graph in which the edges do not point in any direction
+- `Connected Graph` : A graph in which there is always a path from a vertex to any other vertex
+- `Complete Graph` : When all nodes are connected to all other nodes
+- `Weighted Graph` : When edges have values/cost assigned to them. If the weight is absent, we can assume it’s 1.
 
-A graph can have cycles which means that if you traverse through the node, you could get the same node more than once. The graph without cycles is called **acyclic graph**.
+## Graph Representation
 
-Also, acyclic undirected graphs are called tree. We are going to cover trees in depth in the next post.
+- `Adjacency Matrix` : An adjacency matrix is a 2D array of V x V vertices. Each row and column represent a vertex.
 
-Not all vertices have to be connected in the graph. You might have isolated nodes or even separated subgraphs. If all nodes have at least one edge, then we have a **connected graph**. When all nodes are connected to all other nodes, then we have a **complete graph**.
+  - If the value of any element a[i][j] is 1, it represents that there is an edge connecting vertex i and vertex j.
+  - Edge lookup(checking if an edge exists between vertex A and vertex B) is extremely fast in adjacency matrix representation but we have to reserve space for every possible link between all vertices(V x V), so it requires more space.
+  - The biggest advantage however, comes from the use of matrices. The recent advances in hardware enable us to perform even expensive matrix operations on the GPU.
 
-When edges have values/cost assigned to them, we say we have a **weighted graph**. If the weight is absent, we can assume it’s 1.
+- `Adjacency List` : An adjacency list represents a graph as an array of linked lists. The index of the array represents a vertex and each element in its linked list represents the other vertices that form an edge with the vertex.
+  - An adjacency list is efficient in terms of storage because we only need to store the values for the edges.
 
----
+## Graph Operations
 
-There are two primary ways of representing graph:
+1. Check if the element is present in the graph
+2. Graph Traversal
+3. Add elements(vertex, edges) to graph
+4. Finding the path from one vertex to another
 
-#### Adjacency list
+## Ways to search ?
 
-Adjacency List is one of the most common ways to represent graphs. Each node has a list of all the nodes connected to it.
+- `Breadth-first search (BFS)` : Breadth-first search is a way to navigate a graph from an initial vertex by visiting all the adjacent nodes first.
 
-Graphs can be represented as an adjacency list using an Array (or HashMap) containing the nodes. Each of these node entries includes a list (array, linked list, set, etc.) that list its adjacent nodes.
-
-#### Adjacency Matrix
-
-The adjacency matrix is one way of representing a graph using a two-dimensional array (NxN matrix). In the intersection of nodes, we add 1 (or other weight) if they are connected and 0 or - if they are not connected.
-
----
-
-Ways to search ?
-
-#### Breadth-first search (BFS)
-
-Breadth-first search is a way to navigate a graph from an initial vertex by visiting all the adjacent nodes first.
-
-#### Depth-first search (BFS)
-
-Depth-first search is another way to navigate a graph from an initial vertex by recursively the first adjacent node of each vertex found.
+- `Depth-first search (BFS)` : Depth-first search is another way to navigate a graph from an initial vertex by recursively the first adjacent node of each vertex found.

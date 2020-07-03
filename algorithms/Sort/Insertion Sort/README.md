@@ -13,8 +13,6 @@ Take the third element and compare it with the elements on the left of it. Place
 
 Similarly, place every unsorted element at its correct position.
 
----
-
 ## Complexity
 
 Each element has to be compared with each of the other elements so, for every nth element, (n-1) number of comparisons are made. Thus, the total number of comparisons = n\*(n-1) ~ n<sup>2</sup>
@@ -24,8 +22,6 @@ Each element has to be compared with each of the other elements so, for every nt
 | O(n<sup>2</sup>) |   O(n)    | O(n<sup>2</sup>) |
 
 **Space complexity is O(1)** because an extra variable temp is used.
-
----
 
 ## Insertion Sort Applications
 

@@ -14,8 +14,6 @@ Since the tree satisfies Max-Heap property, then the largest item is stored at t
 
 The process is repeated until all the items of the list are sorted.
 
----
-
 ## Complexity
 
 |  Worst Case   |   Best Case   | Average Case  |
@@ -23,8 +21,6 @@ The process is repeated until all the items of the list are sorted.
 | O(n \* log n) | O(n \* log n) | O(n \* log n) |
 
 **Space complexity is O(1)**
-
----
 
 ## Heap Sort Applications
 

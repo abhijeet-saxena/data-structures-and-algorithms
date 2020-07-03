@@ -33,8 +33,6 @@ Repeat above steps until low meets high.
 
 **Space complexity is O(n)**
 
----
-
 ## Linear Search Applications
 
 - In libraries of Java, .Net, C++ STL

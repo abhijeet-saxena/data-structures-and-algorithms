@@ -12,8 +12,6 @@ Divide the list recursively into two halves until it can no more be divided.
 
 Merge the smaller lists into new list in sorted order.
 
----
-
 ## Complexity
 
 |  Worst Case   |   Best Case   | Average Case  |
@@ -21,8 +19,6 @@ Merge the smaller lists into new list in sorted order.
 | O(n \* log n) | O(n \* log n) | O(n \* log n) |
 
 **Space complexity is O(n)**
-
----
 
 ## Merge Sort Applications
 

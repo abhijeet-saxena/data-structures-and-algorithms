@@ -15,8 +15,6 @@ In each iteration, the comparison takes place up to the last unsorted element.
 
 The array is sorted when all the unsorted elements are placed at their correct positions.
 
----
-
 ## Optimized Bubble Sort
 
 In tnormal bubble sort, all possible comparisons are made even if the input is already sorted. It increases the execution time.
@@ -24,8 +22,6 @@ In tnormal bubble sort, all possible comparisons are made even if the input is a
 The code can be optimized by introducing an extra variable swapped. After each iteration, if there is no swapping taking place then, there is no need for performing further loops.
 
 In such a case, variable swapped is set false. Thus, we can prevent further iterations.
-
----
 
 ## Complexity
 
@@ -36,8 +32,6 @@ Bubble Sort is one of the simplest sorting algorithms. Two loops are implemented
 | O(n<sup>2</sup>) |   O(n)    | O(n<sup>2</sup>) |
 
 **Space complexity is O(1)** because an extra variable temp is used for swapping. (O(2) for optimized algorithm).
-
----
 
 ## Bubble Sort Applications
 

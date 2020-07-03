@@ -18,8 +18,6 @@ The sub-parts are again divided into smaller sub-parts until each subpart is for
 At this point, the array is already sorted.
 Quicksort uses recursion for sorting the sub-parts.
 
----
-
 ## Complexity
 
 If pivot element lies in an extreme end of the sorted array, One sub-array is always empty and another sub-array contains n - 1 elements. Thus, quicksort is called only on this sub-array.
@@ -31,8 +29,6 @@ However, the quick sort algorithm has better performance for scattered pivots.
 | O(n<sup>2</sup>) | O(n \* log n) | O(n \* log n) |
 
 **Space complexity is O(log n)**
-
----
 
 ## Quick Sort Applications
 

@@ -18,8 +18,6 @@ Similarly, other elements are inserted into their respective buckets.
 
 The elements from each bucket are gathered.
 
----
-
 ## Complexity
 
 When there are elements of close range in the array, they are likely to be placed in the same bucket. This may result in some buckets having more number of elements than others.
@@ -34,8 +32,6 @@ Even if the elements are not distributed uniformly, bucket sort runs in linear t
 | O(n<sup>2</sup>) | O(n + k)  |    O(n>)     |
 
 **Space complexity is O(n + k)**
-
----
 
 ## Bucket Sort Applications
 
