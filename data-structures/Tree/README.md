@@ -1,82 +1,77 @@
 # Trees
 
-A tree is a data structure where a node can have **zero or more** children. Each node contains a value.
+> A tree is a nonlinear hierarchical data structure that consists of nodes connected by edges. A tree is a data structure where a node can have zero or more children. Each node contains a value.
 
 These data structures are called “trees” because the data structure resembles a tree 🌳.
 
-It starts with a **root node** and branch off with its descendants, and finally, there are **leaves**.
+## Tree Terminologies
 
-Here are some properties of trees:
+- `Node` : A node is an entity that contains a key or value and pointers to its child nodes.
 
-1. The top-most node is called **root**.
-2. A node without children is called **leaf node** or **terminal node**.
-3. **Height** (h) of the tree is the distance (edge count) between the farthest leaf to the root.
-4. **Depth** or **level** of a node is the distance between the root and the node in question.
+  1. `Leaf/External Node`: The last nodes of each path that do not contain a link/pointer to child nodes
+  2. `Internal Node` : The node having at least a child
 
----
+- `Edge` : It is the link between any two nodes.
 
-## Binary Search Trees
+- `Root` : It is the topmost node of a tree.
 
-Trees nodes can have zero or more children. However, when a tree has at the most two children, then it’s called binary tree.
+- `Height of a Node` : The height of a node is the number of edges from the node to the deepest leaf (ie. the longest path from the node to a leaf node).
 
-Binary Search Trees or BST for short are a particular application of binary trees. BST has at most two nodes (like all binary trees). However, the values are in such a way that the left children value must be less than the parent, and the right children is must be higher.
+- `Depth of a Node` : The number of edges from the root to the node.
 
----
+- `Height of a Tree` : The height of the root node or the depth of the deepest node.
 
-## Balanced vs. Non-balanced Trees
+- `Degree of a Node` : The total number of branches of that node.
 
-A tree is balanced if:
+- `Forest` : A collection of disjoint trees is called a forest.
 
-The left subtree height and the right subtree height differ by at most 1. Visit every node making sure rule #1 is satisfied.
+## Traversing a Tree
 
-Remember, _Height of a node is the distance (edge count) from the farthest child to itself._
+Traversing a tree means visiting every node in the tree. Depending on the order in which we do this, there can be three types of traversal:
 
-### Rotations
+- `Inorder traversal`
 
-1. Left Rotation
+  1. First, visit all the nodes in the left subtree
+  2. Then the root node
+  3. Visit all the nodes in the right subtree
 
-```
-1*                                        2
- \                                       /  \
-  2     ---| left-rotation(1) |-->      1*   3
-   \
-    3
-```
+- `Preorder traversal`
 
-2. Right Rotation
+  1. Visit root node
+  2. Visit all the nodes in the left subtree
+  3. Visit all the nodes in the right subtree
 
-```
-      4                                        4
-     /                                        /
-    3*                                       2
-   /                                        /  \
-  2       ---| right-rotation(3) |-->      1    3*
- /
-1
-```
+- `Postorder traversal`
+  1. Visit all the nodes in the left subtree
+  2. Visit all the nodes in the right subtree
+  3. Visit the root node
 
-3. Left-Right Rotation
+## Types of Tree
 
-```
-  3*                                       2*
- /                                        /  \
-1    --| left-right-rotation(3) |->      1    3
- \
-  2
-```
+- `Binary Tree` : A binary tree is a tree data structure in which each parent node can have at most two children.
 
-4. Right-Left Rotation
+- `Binary Search Tree` : Binary search tree is a data structure that quickly allows us to maintain a sorted list of numbers. It is called a search tree because it can be used to search for the presence of a number in O(log(n)) time.
 
-```
-1*                           1*
- \                            \                              2
-   3   -right-rotation(3)->    2   -left-rotation(1)->      /  \
- /                              \                          1*   3
-2                                3
-```
+- `AVL Tree` : AVL tree is a self-balancing binary search tree in which each node maintains extra information called a balance factor whose value is either -1, 0 or +1.
 
----
+- `B Tree` : B tree is a special type of self-balancing search tree in which each node can contain more than one key and can have more than two children. It is a generalized form of the binary search tree.
 
-## AVL Tree
+- `B+ Tree` : A B+ tree is an advanced form of a self-balancing tree in which all the values are present in the leaf level. It has multilevel indexing, which makes accessing the data easier and faster.
 
-AVL Tree was the first self-balanced tree invented. It is named after the two inventors Adelson-Velsky and Landis. In their self-balancing algorithm if one subtree differs from the other by at most one, then rebalancing is done using rotation
+- `Red-Black Tree` : Red-Black tree is a self-balancing binary search tree in which each node contains an extra bit for denoting the color of the node, either red or black. The limitations put on the node colors ensure that any simple path from the root to a leaf is not more than twice as long as any other such path. It helps in maintaining the self-balancing property of the red-black tree.
+
+## Balanced Trees
+
+A balanced binary tree is defined as a binary tree in which the height of the left and right subtree of any node differ by not more than 1. Following are the conditions for a height-balanced binary tree:
+
+1. difference between he left and the right subtree for any node is not more than one
+2. the left subtree is balanced
+3. the right subtree is balanced
+
+## Tree Applications
+
+- Binary Search Trees(BSTs) are used to quickly check whether an element is present in a set or not.
+- Heap is a kind of tree that is used for heap sort.
+- A modified version of a tree called Tries is used in modern routers to store routing information.
+- Most popular databases use B-Trees and T-Trees, which are variants of the tree structure we learned above to store their data
+- Compilers use a syntax tree to validate the syntax of every program you write.
