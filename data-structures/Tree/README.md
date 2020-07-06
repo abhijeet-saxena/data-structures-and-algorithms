@@ -1,6 +1,6 @@
 # Trees
 
-> A tree is a nonlinear hierarchical data structure that consists of nodes connected by edges. A tree is a data structure where a node can have zero or more children. Each node contains a value.
+> ## A tree is a nonlinear hierarchical data structure that consists of nodes connected by edges. A tree is a data structure where a node can have zero or more children. Each node contains a value.
 
 These data structures are called “trees” because the data structure resembles a tree 🌳.
 

@@ -1,6 +1,6 @@
 # Linear Search
 
-> Linear search is the simplest searching algorithm that searches for an element in a list in sequential order. We start at one end and check every element until the desired element is not found.
+> ## Linear search is the simplest searching algorithm that searches for an element in a list in sequential order. We start at one end and check every element until the desired element is not found.
 
 ## How Linear Search Works?
 

@@ -1,6 +1,6 @@
 # Radix Sort
 
-> Radix sort is a sorting technique that sorts the elements by first grouping the individual digits of the same place value and then sorting the elements according to their increasing/decreasing order.
+> ## Radix sort is a sorting technique that sorts the elements by first grouping the individual digits of the same place value and then sorting the elements according to their increasing/decreasing order.
 
 ## How Radix Sort Works?
 

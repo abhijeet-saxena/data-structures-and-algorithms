@@ -1,6 +1,6 @@
 # Queues
 
-> A Queue is a linear structure which follows a particular order in which the operations are performed. The order is `FIFO` (First In First Out). In a queue, we remove the item the least recently added.
+> ## A Queue is a linear structure which follows a particular order in which the operations are performed. The order is `FIFO` (First In First Out). In a queue, we remove the item the least recently added.
 
 ## Operations
 

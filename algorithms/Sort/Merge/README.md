@@ -1,6 +1,6 @@
 # Merge Sort
 
-> Merge sort recursively divides the input into halves until we reach the base case of input with 1 element. After that, it picks up the sorted sub-arrays and merges them to gradually sort the entire array.
+> ## Merge sort recursively divides the input into halves until we reach the base case of input with 1 element. After that, it picks up the sorted sub-arrays and merges them to gradually sort the entire array.
 
 Using the Divide and Conquer technique, we divide a problem into subproblems. When the solution to each subproblem is ready, we 'combine' the results from the subproblems to solve the main problem.
 

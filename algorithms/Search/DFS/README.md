@@ -1,6 +1,6 @@
 # Depth First Search (DFS)
 
-> Depth-first search is another way to navigate a graph from an initial vertex by recursively the first adjacent node of each vertex found.
+> ## Depth-first search is another way to navigate a graph from an initial vertex by recursively the first adjacent node of each vertex found.
 
 ## How DFS Works?
 

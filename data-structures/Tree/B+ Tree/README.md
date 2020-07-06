@@ -1,6 +1,6 @@
 # B+ Tree
 
-> A B+ tree is an advanced form of a self-balancing tree in which all the values are present in the leaf level. It has multilevel indexing, which makes accessing the data easier and faster.
+> ## A B+ tree is an advanced form of a self-balancing tree in which all the values are present in the leaf level. It has multilevel indexing, which makes accessing the data easier and faster.
 
 Some of of it's properties are:
 

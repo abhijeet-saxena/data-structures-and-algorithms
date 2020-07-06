@@ -1,6 +1,6 @@
 # Shell Sort
 
-> Shell sort is an algorithm that first sorts the elements far apart from each other and successively reduces the interval between the elements to be sorted.
+> ## Shell sort is an algorithm that first sorts the elements far apart from each other and successively reduces the interval between the elements to be sorted.
 
 In shell sort, elements at a specific interval are sorted. The interval between the elements is gradually decreased based on the sequence used.
 

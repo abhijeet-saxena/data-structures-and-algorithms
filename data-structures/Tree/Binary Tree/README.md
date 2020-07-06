@@ -1,6 +1,6 @@
 # Binary Tree
 
-> A binary tree is a tree data structure in which each parent node can have at most two children.
+> ## A binary tree is a tree data structure in which each parent node can have at most two children.
 
 ## Types of Binary Tree
 

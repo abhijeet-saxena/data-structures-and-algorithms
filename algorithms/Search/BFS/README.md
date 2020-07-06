@@ -1,6 +1,6 @@
 # Breadth First Search (BFS)
 
-> Breadth-first search is a way to navigate a graph from an initial vertex by visiting all the adjacent nodes first.
+> ## Breadth-first search is a way to navigate a graph from an initial vertex by visiting all the adjacent nodes first.
 
 ## How BFS Works?
 

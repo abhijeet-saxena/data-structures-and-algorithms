@@ -1,7 +1,6 @@
 # Insertion Sort
 
-> Insertion sort is a sorting algorithm that places an unsorted element at its suitable place in each iteration.
-> Insertion sort works similarly as we sort cards in our hand in a card game.
+> ## Insertion sort is a sorting algorithm that places an unsorted element at its suitable place in each iteration. Insertion sort works similarly as we sort cards in our hand in a card game.
 
 ## How Insertion Sort Works?
 

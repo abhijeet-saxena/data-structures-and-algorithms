@@ -1,6 +1,6 @@
 # Bubble Sort
 
-> Bubble sort is an algorithm that compares the adjacent elements and swaps their positions if they are not in the intended order.
+> ## Bubble sort is an algorithm that compares the adjacent elements and swaps their positions if they are not in the intended order.
 
 ## How Bubble Sort Works?
 

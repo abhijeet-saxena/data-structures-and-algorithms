@@ -1,6 +1,6 @@
 # Heaps
 
-> A Heap is a special Tree-based data structure in which the tree is a complete binary tree.
+> ## A Heap is a special Tree-based data structure in which the tree is a complete binary tree.
 
 Generally, Heaps can be of two types:
 

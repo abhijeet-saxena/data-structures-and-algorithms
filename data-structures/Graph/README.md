@@ -1,6 +1,6 @@
 # Graphs
 
-> A graph is a data structure where a node can have zero or more adjacent elements.
+> ## A graph is a data structure where a node can have zero or more adjacent elements.
 
 More precisely, a graph is a data structure (V, E) that consists of -
 

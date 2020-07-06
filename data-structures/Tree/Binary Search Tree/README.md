@@ -1,6 +1,6 @@
 # Binary Search Tree
 
-> Binary search tree is a data structure that quickly allows us to maintain a sorted list of numbers. It is called a search tree because it can be used to search for the presence of a number in O(log(n)) time.
+> ## Binary search tree is a data structure that quickly allows us to maintain a sorted list of numbers. It is called a search tree because it can be used to search for the presence of a number in O(log(n)) time.
 
 The properties that separate a binary search tree from a regular binary tree are:
 
