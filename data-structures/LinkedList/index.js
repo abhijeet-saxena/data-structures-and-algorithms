@@ -1,5 +1,6 @@
 class Node {
   constructor(value) {
+    this.prev = null; //Useful only for Doubly-linkedList
     this.value = value;
     this.next = null;
   }
