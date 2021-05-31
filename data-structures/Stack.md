@@ -29,3 +29,92 @@ For array based implementation of a stack, the push and pop operations take cons
 - To reverse a word - Put all the letters in a stack and pop them out. Because of the LIFO order of stack, you will get the letters in reverse order.
 - In compilers - Compilers use the stack to calculate the value of expressions like 2 + 4 / 5 \* (7 - 9) by converting the expression to prefix or postfix form.
 - In browsers - The back button in a browser saves all the URLs you have visited previously in a stack. Each time you visit a new page, it is added on top of the stack. When you press the back button, the current URL is removed from the stack and the previous URL is accessed.
+
+## Implementation
+
+```js
+class Node {
+  constructor(value) {
+    this.val = value;
+    this.next = null;
+  }
+}
+
+class Stack {
+  constructor() {
+    this.first = null;
+    this.last = null;
+    this.size = 0;
+  }
+
+  push(val) {
+    const newNode = new Node(val);
+
+    if (this.size === 0) {
+      this.first = newNode;
+      this.last = newNode;
+    } else {
+      const temp = this.first;
+      this.first = newNode;
+      this.first.next = temp;
+    }
+
+    return ++this.size;
+  }
+
+  pop() {
+    if (this.size === 0) return undefined;
+    const temp = this.first;
+
+    if (this.size === 1) {
+      this.first = null;
+      this.last = null;
+    } else {
+      this.first = this.first.next;
+    }
+
+    this.size--;
+    return temp.val;
+  }
+}
+
+const stack = new Stack();
+
+stack.push(1);
+stack.push(2);
+stack.push(3);
+stack.pop();
+```
+
+## Implementation (Using in-built arrays)
+
+```js
+class Stack {
+  constructor() {
+    this._length = 0;
+    this._items = [];
+  }
+
+  push(value) {
+    this._items.push(value);
+    this._length++;
+  }
+
+  pop() {
+    if (!this._length) return;
+    else return this._items.splice(--this._length, 1);
+  }
+
+  peek() {
+    return this._items[this._length];
+  }
+
+  size() {
+    return this._length;
+  }
+
+  isEmpty() {
+    return !this._length;
+  }
+}
+```
