@@ -48,17 +48,17 @@ Traversing a tree means visiting every node in the tree. Depending on the order 
 
 ## Types of Tree
 
-- `Binary Tree` : A binary tree is a tree data structure in which each parent node can have at most two children.
+- [`Binary Tree`](Tree/Binary%20Tree.md) : A binary tree is a tree data structure in which each parent node can have at most two children.
 
-- `Binary Search Tree` : Binary search tree is a data structure that quickly allows us to maintain a sorted list of numbers. It is called a search tree because it can be used to search for the presence of a number in O(log(n)) time.
+- [`Binary Search Tree`](BinarySearchTree.md) : Binary search tree is a data structure that quickly allows us to maintain a sorted list of numbers. It is called a search tree because it can be used to search for the presence of a number in O(log(n)) time.
 
-- `AVL Tree` : AVL tree is a self-balancing binary search tree in which each node maintains extra information called a balance factor whose value is either -1, 0 or +1.
+- [`AVL Tree`](Tree/AVL%20Tree.md) : AVL tree is a self-balancing binary search tree in which each node maintains extra information called a balance factor whose value is either -1, 0 or +1.
 
-- `B Tree` : B tree is a special type of self-balancing search tree in which each node can contain more than one key and can have more than two children. It is a generalized form of the binary search tree.
+- [`B Tree`](Tree/B%20Tree.md) : B tree is a special type of self-balancing search tree in which each node can contain more than one key and can have more than two children. It is a generalized form of the binary search tree.
 
-- `B+ Tree` : A B+ tree is an advanced form of a self-balancing tree in which all the values are present in the leaf level. It has multilevel indexing, which makes accessing the data easier and faster.
+- [`B+ Tree`](Tree/B+%20Tree.md) : A B+ tree is an advanced form of a self-balancing tree in which all the values are present in the leaf level. It has multilevel indexing, which makes accessing the data easier and faster.
 
-- `Red-Black Tree` : Red-Black tree is a self-balancing binary search tree in which each node contains an extra bit for denoting the color of the node, either red or black. The limitations put on the node colors ensure that any simple path from the root to a leaf is not more than twice as long as any other such path. It helps in maintaining the self-balancing property of the red-black tree.
+- [`Red-Black Tree`](Tree/Red-Black%20Tree.md) : Red-Black tree is a self-balancing binary search tree in which each node contains an extra bit for denoting the color of the node, either red or black. The limitations put on the node colors ensure that any simple path from the root to a leaf is not more than twice as long as any other such path. It helps in maintaining the self-balancing property of the red-black tree.
 
 ## Balanced Trees
 
