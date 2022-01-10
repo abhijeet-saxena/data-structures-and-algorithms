@@ -75,3 +75,137 @@ A balanced binary tree is defined as a binary tree in which the height of the le
 - A modified version of a tree called Tries is used in modern routers to store routing information.
 - Most popular databases use B-Trees and T-Trees, which are variants of the tree structure we learned above to store their data
 - Compilers use a syntax tree to validate the syntax of every program you write.
+
+## Implementation (Binary Search Tree)
+
+```js
+class Node {
+  constructor(val) {
+    this.val = val;
+    this.left = null;
+    this.right = null;
+  }
+}
+
+class BinarySearchTree {
+  constructor() {
+    this.root = null;
+  }
+
+  insert(val) {
+    const newNode = new Node(val);
+
+    if (!this.root) {
+      this.root = newNode;
+      return this;
+    } else {
+      let current = this.root;
+
+      while (true) {
+        if (val === current.val) return undefined;
+        if (val < current.val) {
+          if (current.left === null) {
+            current.left = newNode;
+            return this;
+          }
+          current = current.left;
+        } else {
+          if (current.right === null) {
+            current.right = newNode;
+            return this;
+          }
+          current = current.right;
+        }
+      }
+    }
+  }
+
+  find(val) {
+    if (!this.root) return false;
+
+    let current = this.root;
+
+    while (current) {
+      if (val === current.val) return true;
+      current = val < current.val ? current.left : current.right;
+    }
+
+    return false;
+  }
+
+  bfs() {
+    const visited = [];
+    const queue = [];
+    queue.push(this.root);
+
+    while (queue.length > 0) {
+      let popped = queue.shift();
+      visited.push(popped.val);
+      if (popped.left) queue.push(popped.left);
+      if (popped.right) queue.push(popped.right);
+    }
+    return visited;
+  }
+
+  dfs_pre_order() {
+    const visited = [];
+
+    function traverse(node) {
+      visited.push(node.val);
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+    }
+
+    traverse(this.root);
+    return visited;
+  }
+
+  dfs_post_order() {
+    const visited = [];
+
+    function traverse(node) {
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+      visited.push(node.val);
+    }
+
+    traverse(this.root);
+    return visited;
+  }
+
+  dfs_in_order() {
+    const visited = [];
+
+    function traverse(node) {
+      if (node.left) traverse(node.left);
+      visited.push(node.val);
+      if (node.right) traverse(node.right);
+    }
+
+    traverse(this.root);
+
+    return visited;
+  }
+}
+
+const tree = new BinarySearchTree();
+
+tree.insert(10);
+tree.insert(6);
+tree.insert(15);
+tree.insert(11);
+tree.insert(3);
+tree.insert(8);
+tree.insert(20);
+
+//              10
+//          6        15
+//        3   8    11  20
+
+console.log(tree);
+
+tree.bfs(); // [10,6,15,3,8,11,20]
+tree.dfs_pre_order(); // [10,6,3,8,15,11,20]
+tree.dfs_post_order(); // [3,8,6,11,20,15,10]
+tree.dfs_in_order(); // [3,6,8,10,11,15,20]
+```

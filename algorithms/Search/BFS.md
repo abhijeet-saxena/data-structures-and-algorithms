@@ -34,3 +34,22 @@ If V is the number of nodes and E is the number of edges.
 - In Ford-Fulkerson algorithm to find maximum flow in a network
 - Cycle detection in an undirected graph
 - In minimum spanning tree
+
+## Implementation
+
+```js
+bfs() {
+    const visited = [];
+    const queue = [];
+    queue.push(this.root);
+
+    while (queue.length > 0) {
+        let popped = queue.shift();
+        visited.push(popped.val);
+        if (popped.left) queue.push(popped.left);
+        if (popped.right) queue.push(popped.right);
+    }
+
+    return visited;
+}
+```

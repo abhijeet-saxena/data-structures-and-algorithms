@@ -32,3 +32,46 @@ If V is the number of nodes and E is the number of edges.
 - To test if the graph is bipartite
 - For finding the strongly connected components of a graph
 - For detecting cycles in a graph
+
+## Implementation
+
+```js
+dfs_pre_order() {
+  const visited = [];
+
+  function traverse(node) {
+    visited.push(node.val);
+    if (node.left) traverse(node.left);
+    if (node.right) traverse(node.right);
+  }
+  traverse(this.root);
+
+  return visited;
+}
+
+dfs_post_order() {
+  const visited = [];
+
+  function traverse(node) {
+    if (node.left) traverse(node.left);
+    if (node.right) traverse(node.right);
+    visited.push(node.val);
+  }
+  traverse(this.root);
+
+  return visited;
+}
+
+dfs_in_order() {
+  const visited = [];
+
+  function traverse(node) {
+    if (node.left) traverse(node.left);
+    visited.push(node.val);
+    if (node.right) traverse(node.right);
+  }
+  traverse(this.root);
+
+  return visited;
+}
+```
